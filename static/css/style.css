@@ -1,0 +1,662 @@
+html{
+	scroll-behavior: smooth;
+}
+
+*{margin: 0; padding: 0; box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;}
+
+a{text-decoration: none;}
+
+a:hover{
+	text-decoration: none;
+}
+
+li{
+	list-style: none;
+}
+
+p{
+	font-size: 0.9rem;
+	line-height: 1.6;
+	font-weight: 400;
+	color: #606060;
+}
+.extra-div h2, .servicediv h2{
+	font-size: 0.9rem;
+	margin: 20px 0 15px 0;
+	font-weight: bold;
+	line-height: 1.1;
+	word-spacing: 4px;
+}
+
+i{
+	color: #2fccd0;
+}
+
+
+
+.navbar-brand p
+{
+	color:#fff!important;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.navbar-nav li
+{
+	padding: 0 10px;
+}
+
+.navbar-nav li a
+{
+	float: right;
+	text-align: center;
+}
+
+#nav-bar ul li a:hover
+{
+	color: #152F4F!important;
+}
+
+.navbar
+{
+	background: transparent!important;
+}
+
+.navbar-toggler
+{
+	border:none!important;
+}
+
+.nav-link
+{
+	color: #b6c1c6!important;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+
+/**********************extra header div starts here***********/
+
+#slider
+{
+	width: 100%;
+}
+
+.carousel-caption
+{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: initial!important;
+
+}
+
+.carousel-caption h1
+{
+	color: #fff;
+	font-size: 3rem;
+	padding-bottom: .6rem;
+}
+.carousel-caption p
+{
+	color: #fff;
+	font-size: 1rem;
+	padding-bottom: .6rem;
+}
+
+
+.carousel-caption a{
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding: 12px 35px;
+	outline: none;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.4;
+	text-align: center;
+}
+
+.carousel-caption a:hover{
+	color: #000000;
+	background: #152F4F;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+/**********************extra header div starts here***********/
+
+
+.header-extradiv{
+	width: 100%;
+	height: auto;
+	margin: 100px 0;
+	text-align: center;
+}
+.extra-div{
+	background: #fff;
+	border: medium none;
+	padding: 50px!important;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+
+.extra-div:hover{
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+	transform: translateY(-20px);
+}
+
+/**********************extra header div ends here***********/
+
+/**********************service offer css starts***********/
+.serviceoffers{
+	background: #f7f7f9;
+	padding: 50px 0;
+	margin-bottom: 50px;
+}
+
+.headings{
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.headings h1{
+	text-align: center;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.names h1{
+	color: #2e2e2e;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.service-icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.progress{
+	height: 0.6rem!important;
+	margin-bottom: 25px!important;
+}
+
+
+
+/**********************service offers css ends here***********/
+
+/**********************awards won starts***********/
+.project-work{
+	margin: 100px 0;
+}
+.project-works h1{
+	font-size: 2rem;
+	text-align: center;
+}
+/**********************awards won ends***********/
+
+/**********************pricing css starts***********/
+.pricing{
+	width: 100%;
+	height: 100vh;
+	padding: 50px;
+	position: relative;
+}
+
+.pricing:before{
+	content: "";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background: linear-gradient(160deg, #152F4F 55%, #fff 0%);
+}
+.money{
+	font-size: 40px;
+	line-height: 1;
+	color: #606060;
+}
+
+.card{
+	transition: 0.4s ease;
+	text-align: center;
+}
+
+.card header{
+	font-size: 1.6rem;
+	font-weight: bold;
+	background: #fff!important;
+	padding: 25px 9!important;
+}
+
+.card-body{
+	padding: 30px 0px!important;
+}
+
+.card-body{
+	margin: 10px 0;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #606060;
+}
+.card-footer{
+	background: white!important;
+	padding: 30px 0px!important;
+}
+
+.card-footer a{
+	border: 1px solid #152F4F;
+	color: #152F4F;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding: 12px 35px;
+	outline: none;
+	font-size:2 rem;
+	font-weight: bold;
+	line-height: 1.9;
+	text-align: centre;
+}
+.card-footer a:hover{
+	color: #fff;
+	background: #152F4F;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+.card:hover{
+	transform: translateY(-20px);
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+.card:hover .card-header, .card:hover .money{
+	color: #152F4F;
+}
+
+.card-second{
+	transform: translateY(-20px);
+
+}
+
+/**********************pricing css ends***********/
+/**********************registration starts***********/
+
+.contactus{
+	width: 100%;
+	height: 100vh;
+	padding: 80px 0;
+	position: relative;
+}
+
+.contactus:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(335deg, #16c9f6 50%, #fff 0%);
+	z-index: -1;
+}
+
+.from-button button{
+	border: 1px solid #fff;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding: 12px 35px;
+	outline: none;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.9;
+	text-align: centre;
+	background: #152F4F;
+} 
+.from-button button:hover{
+	color: #50d1c0;
+}
+
+form:hover .from-button button{
+	background: #fff;
+	color: #152F4F;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+::placeholder{
+	font-size: 0.85;
+}
+
+/**********************registration ends***********/
+/**********************newsletter starts***********/
+.newsletter{
+	width: 100%;
+	height: auto;
+	margin: 80px auto;
+}
+
+.newsletter .email{
+	width: 100%;
+	height: 90px;
+}
+
+.news-input{
+	border-radius: 100px 0px 0px 100px!important;
+	min-width: 150px;
+	min-width: 45px;
+}
+
+.input-group-text{
+	color: #fff!important;
+	background: #152F4F!important;
+	border-radius: 0 100px 100px 0!important;
+	min-width: 140px;
+	min-height: 30px; 
+}
+/**********************newsletter ends***********/
+/**********************footer starts***********/
+
+.footersection{
+	width: 100%;
+	height: auto;
+	padding: 70px 0 10px 0;
+	background: #152F4F;
+	position: relative;
+}
+
+.footersection p{
+	color: #fff;
+}
+
+.footersection li a{
+	font-size: 0.9rem;
+	line-height: 1.6;
+	font-weight: 400;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+.footersection h3{
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 25px;
+	font-size: 1.2rem!important;
+	font-weight: 600;
+	text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+#myBtn{
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	border: none;
+	color: #fff;
+	background: #152F4F;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#myBtn:hover{
+	background: #606860;
+}
+
+/**********************footer ends***********/
+.login{
+	width: 100%;
+	height: inherit;
+	padding: 100px 0;
+	position: relative;
+}
+
+.form-button button{
+	border: 1px solid #152F4F;
+	border-radius: 100px;
+	color: #152F4F;
+	margin: 0 5px;
+	padding: 12px 35px;
+	outline: none;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.9;
+	text-align: centre;
+	background: transparent;
+} 
+.form-button button:hover{
+	color: #152F4F;
+}
+
+form:hover .form-button button{
+	background: #152F4F;
+	color: #fff;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+::placeholder{
+	font-size: 0.85;
+}
+
+
+/**********************footer ends***********/
+@media(max-width: 767px){
+	.nav-item{
+		text-align: center!important;
+	}
+	.navbar-toggler-icon
+	{
+		font-size: 10px;
+	}
+
+	.navbar-brand p
+	{
+		font-weight: 600;
+		font-size: 15px;
+	}
+
+	.navbar-nav li a
+	{
+		font-size: .2rem;
+		float: right;
+		text-align: center;
+	}
+
+	.carousel-caption h1
+	{
+		font-size: 1rem;
+		padding-bottom: .2rem;
+	}
+	.carousel-caption p
+	{
+		font-size: .6rem;
+		padding-bottom: .6rem;
+	}
+
+
+	.carousel-caption a{
+		border: 1px solid #fff;
+		border-radius: 50px;
+		margin: 0 5px;
+		padding: 12px 35px;
+		outline: none;
+		font-size: .4rem;
+		font-weight: bold;
+		line-height: .4rem;
+	}
+
+
+	.pricing, .contactus{
+		height: auto;
+		margin-top: 50px;
+	}
+
+	.card-second{
+		transform: translateY(0px);
+		margin: 30px 0;
+	}
+
+	.footer-div:nth-child(2){
+		text-align: left!important;
+	}
+
+	.footer-div{
+		margin: 30px 0;
+	}
+
+	.sidebar
+	{
+		background-size: 10px;
+	}
+}
+
+
+.peginationbtn
+{
+	text-align: center;
+}
+
+
+/*******************profile css starts***********************/
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work h1{
+    font-size: 20px;
+    color: #495057;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work p{
+    text-decoration: none;
+    color: #818182;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+/**********************profile css ends*************************/
+
+
+
+/* adminnavbar */
+.sidebar {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(/static/images/kobe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 5px 7px 25px #999;
+}
+
+.bottom-border {
+  border-bottom: 1px groove #eee;
+}
+
+.sidebar-link {
+
+  transition: all .4s;
+}
+
+.sidebar-link:hover {
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.current {
+  background-color: #f44336;
+  border-radius: 7px;
+  box-shadow: 2px 5px 10px #111;
+  transition: all .3s;
+}
+
+.current:hover {
+  background-color: #f66436;
+  border-radius: 7px;
+  box-shadow: 2px 5px 20px #111;
+  transform: translateY(-1px);
+}
+
+
+
+/* end of navbar */
+
+

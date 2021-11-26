@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <section>
+      <div class="container-fluid">
+        <div class="row mb-10">
+          <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+            <div class="row align-items-center">
+              <div class="col-xl-20 col-12 mb-4 mb-xl-0">
+                <h3 class="text-muted text-center mb-3">Booking Details</h3>
+                <input type="text" class="form-control col-md-4" id="booksrch" placeholder="Search here.....">
+                <table class="table table-striped bg-light text-center">
+				<tr>
+						<th>ID</th>
+						<th>Username</th>
+						<th>Game</th>
+						<th>Shift</th>
+						<th>Package</th>
+						<th>Number</th>
+						
+				</tr>
+				{% for book in bookdetail %}
+				<tr>
+						<td>{{book.id}}</td>
+						<td>{{book.username}}</td>
+						<td>{{book.game}}</td>
+						<td>{{book.shift}}</td>
+						<td>{{book.package}}</td>
+						<td>{{book.number}}</td>
+						
+				</tr>
+				{% endfor %}
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of tables -->
+<script>
+	$(document).ready(()=>{
+		$("#booksrch").keyup(()=>{
+			$.ajax({
+				data:{search:$("#booksrch").val()},
+				url:'/booksrch',
+				method:'GET',
+				success:function(data){
+					console.log(data);
+					$("tr").not("tr:first").remove();
+					for(d of data){
+						var html="";
+						html+="<tr>";
+							html+="<td>"+d.id+"</td>";
+							html+="<td>"+d.fname+"</td>";
+							html+="<td>"+d.lname+"</td>";
+							html+="<td>"+d.game+"</td>";
+							html+="<td>"+d.shift+"</td>";
+							html+="<td>"+d.package+"</td>";
+							html+="<td>"+d.number+"</td>";
+							html+="<td>"+d.username+"</td>";
+						html+="</tr>"
+
+						$("table").append(html);
+					}
+				},error:function(error){
+					console.log(error)
+				},complete:function(){
+					console.log("complete")
+				}
+			})
+		})
+	})
+</script>
+
+{% endblock %}

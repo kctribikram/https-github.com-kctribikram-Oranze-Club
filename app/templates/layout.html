@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Oranze Club</title>
+	  <meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="{% static 'jquery/jquery.js' %}"></script>    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all.min.css' %}">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <button class="navbar-toggler ml-auto mb-2 bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- sidebar -->
+            <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+              <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">Oranze Club</a>
+              <li class="nav-item"><a href="show" class="nav-link text-white p-2 mb-2 current "><i class="fas fa-home text-light fa-lg mr-2"></i>Dashboard</a></li>
+              <ul class="navbar-nav flex-column mt-4">
+                {% if request.session.username %}
+                <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-2 mb-2 bottom-border sidebar-link"><i class="fas fa-user-shield text-light fa-lg mr-2 "></i>{{request.session.username}}</a>
+                <a href="show" class="navbar-brand text-white d-block mx-auto text-center py-2 mb-2 sidebar-link"><i class="fas fa-basketball-ball text-light fa-lg mr-2"></i>Game Details</a>
+                <a href="players" class="navbar-brand text-white d-block mx-auto text-center py-2 mb-2 sidebar-link"><i class="fas fa-users text-light fa-lg mr-2"></i>Player Details</a>
+                <a href="bookdetails" class="navbar-brand text-white d-block mx-auto text-center py-2 mb-2 sidebar-link"><i class="fas fa-book text-light fa-lg mr-2"></i>Booking Details</a>
+                <a href="admindetails" class="navbar-brand text-white d-block mx-auto text-center py-2 mb-2 sidebar-link"><i class="fas fa-user-cog text-light fa-lg mr-2"></i>Admin Details</a>
+                <a href="messagedetails" class="navbar-brand text-white d-block mx-auto text-center py-2 mb-2 sidebar-link"><i class="fas fa-envelope text-light fa-lg mr-2"></i>Message</a>
+                <a href="adminlogout" class="navbar-brand text-white d-block mx-auto text-center py-2 mb-2 sidebar-link"><i class="fas fa-sign-out-alt text-light fa-lg mr-2"></i>Logout</a>
+                {% endif %}
+              </ul>
+            </div>
+            <!-- end of sidebar -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+{% block content %}
+
+{% endblock %}
+<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/counterup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/waypoints.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+</body>
+</html>

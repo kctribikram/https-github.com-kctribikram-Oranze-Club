@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+	<section class="contactus" id="contactid">
+		<div class="container headings text-center">
+			<h1 class="text-center font-weight-bold">Admin Signup</h1>
+		</div>
+		<form method="POST" class="post-from" action="/signupadmin">
+		{% csrf_token %}
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-10 offset-lg-2 offset-mg-2 offset-1">
+
+					 <div class="form-group">
+					    <input type="fname" class="form-control" placeholder="Enter your First Name" id="fname" name="fname" required autocomplete="off"> 
+					 </div>
+					 <div class="form-group">
+					    <input type="lname" class="form-control" placeholder="Enter your Last Name" id="lname" name="lname" required autocomplete="off">   
+					 </div>
+					 <div class="form-group">
+					    <input type="username" class="form-control" placeholder="Enter your username" id="user" name="username" required autocomplete="off">
+					 </div>
+
+					 <div class="form-group">
+					    <input type="password" class="form-control" placeholder="Enter password" id="password" name="password" required autocomplete="off">  
+					 </div>
+					  <div class="form-group form-check">
+					    <label class="form-check-label">
+					      <input class="form-check-input" type="checkbox"> Remember me
+					    </label>
+					 </div>
+
+					 <div class="d-flex justify-content-center from-button">
+					 <button type="submit" class="btn btn-primary">Submit</button>
+					 </div>
+					 <div>
+                		{% for message in messages %}
+                  			<h3> {{message}} </h3>
+                		{% endfor %}
+              		</div>
+				</div>	
+			</div>
+		</div>
+
+		</form>
+		
+	</section>
+
+	{% endblock %}

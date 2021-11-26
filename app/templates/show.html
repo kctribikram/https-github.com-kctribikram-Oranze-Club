@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <section>   	
+      <div class="container-fluid">
+        <div class="row mb-10">
+          <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+            <div class="row align-items-center">
+              <div class="col-xl-20 col-12 mb-4 mb-xl-0">
+                <h3 class="text-muted text-center mb-3">Game Details</h3>
+                <input type="text" class="form-control col-md-4" id="srch" placeholder="Search here.....">
+                <table class="table table-striped bg-light text-center">
+				<tr>
+						<th>ID</th>
+						<th>NAME</th>
+						<th>PRICE</th>
+						<th>SHIFT</th>
+						<th>Action</th>
+				</tr>
+				{% for game in games %}
+				<tr>
+						<td>{{game.game_id}}</td>
+						{% load static %}
+						<td>{{game.name}}</td>
+						<td>{{game.package}}</td>
+						<td>{{game.shift}}</td>
+						<td><a href="/edit/{{game.game_id}}">Edit</a>|<a href="/delete/{{game.game_id}}">Delete</a> </td>
+				</tr>
+				{% endfor %}
+                </table>
+		        <div class="col-md-2">
+		            <a href="/create" class="btn btn-primary">Add Games</a>
+		        </div>                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of tables -->
+
+<script>
+	$(document).ready(()=>{
+		$("#srch").keyup(()=>{
+			$.ajax({
+				data:{srch:$("#srch").val()},
+				url:'/srch',
+				method:'GET',
+				success:function(data){
+					console.log(data);
+					$("tr").not("tr:first").remove();
+					for(d of data){
+						var html="";
+						html+="<tr>";
+							html+="<td>"+d.game_id+"</td>";
+							html+="<td>"+d.name+"</td>";
+							html+="<td>"+d.package+"</td>";
+							html+="<td>"+d.shift+"</td>";
+							html+="<td><a href='/edit/"+d.game_id+"'>edit</a> | <a href='/delete/"+d.game_id+"'>delete</a> </td>";
+						html+="</tr>"
+
+						$("table").append(html);
+					}
+				},error:function(error){
+					console.log(error)
+				},complete:function(){
+					console.log("complete")
+				}
+			})
+		})
+	})
+</script>
+{% endblock content %}
